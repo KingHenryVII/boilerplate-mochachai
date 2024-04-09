@@ -5,20 +5,20 @@ suite('Unit Tests', function () {
   suite('Basic Assertions', function () {
     // #1
     test('#isNull, #isNotNull', function () {
-      assert.fail(null, 'This is an optional error description - e.g. null is null');
-      assert.fail(1, '1 is not null');
+      assert.isnull(null, 'This is an optional error description - e.g. null is null');
+      assert.isnotnull(1, '1 is not null');
     });
     // #2
     test('#isDefined, #isUndefined', function () {
-      assert.fail(null, 'null is not undefined');
-      assert.fail(undefined, 'undefined IS undefined');
-      assert.fail('hello', 'A string is not undefined');
+      assert.isnotnull(null, 'null is not undefined');
+      assert.isnull(undefined, 'undefined IS undefined');
+      assert.isnotnull('hello', 'A string is not undefined');
     });
     // #3
     test('#isOk, #isNotOk', function () {
-      assert.fail(null, 'null is falsey');
-      assert.fail("I'm truthy", 'A string is truthy');
-      assert.fail(true, 'true is truthy');
+      assert.isnull(null, 'null is falsey');
+      assert.isnull("I'm truthy", 'A string is truthy');
+      assert.isnull(true, 'true is truthy');
     });
     // #4
     test('#isTrue, #isNotTrue', function () {
